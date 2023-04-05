@@ -10,18 +10,23 @@ router.get("/", (req, res, next) => {
 
 // Adiciona um novo pedido
 router.post("/", (req, res, next) => {
+  const order = {
+    id_order: req.body.id_order,
+    quantity: req.body.quantity,
+  };
   res.status(201).send({
     message: "Adicionado um novo pedido",
+    createdOrder: order,
   });
 });
 
 // Busca por um pedido específico
-router.get("/:id_pedido", (req, res, next) => {
-  const id = req.params.id_product;
+router.get("/:id_order", (req, res, next) => {
+  const id = req.params.id_order;
 
   res.status(200).send({
     message: "Detalhes do pedido",
-    id_pedido: id,
+    id_order: id,
   });
 });
 

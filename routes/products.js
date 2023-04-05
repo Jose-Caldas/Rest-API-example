@@ -10,8 +10,13 @@ router.get("/", (req, res, next) => {
 
 // Adiciona um novo produto
 router.post("/", (req, res, next) => {
+  const product = {
+    name: req.body.name,
+    price: req.body.price,
+  };
   res.status(201).send({
     message: "Adicionado novo produto",
+    createdProduct: product,
   });
 });
 
