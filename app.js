@@ -1,10 +1,10 @@
 const express = require("express");
 const app = express();
 
-app.use((req, res, next) => {
-  res.status(200).send({
-    message: "API started successfully",
-  });
-});
+const productRoute = require("./routes/products");
+const orderRoute = require("./routes/order");
+
+app.use("/products", productRoute);
+app.use("/pedido", orderRoute);
 
 module.exports = app;
