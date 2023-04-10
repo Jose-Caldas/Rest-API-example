@@ -24,7 +24,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use("/products", productRoute);
+app.use("/produtos", productRoute);
 app.use("/pedidos", orderRoute);
 
 // Caso não encontre nenhuma rota
