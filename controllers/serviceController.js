@@ -1,4 +1,3 @@
-const express = require("express");
 const { Service: ServiceModel } = require("../models/Service");
 
 //funções para manipulação dos serviços nas rotas

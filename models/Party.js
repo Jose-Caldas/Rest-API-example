@@ -22,7 +22,7 @@ const partySchema = new Schema(
       required: true,
     },
     image: {
-      type: Number,
+      type: String,
       required: true,
     },
     services: {
